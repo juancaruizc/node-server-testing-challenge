@@ -48,7 +48,7 @@ describe('aliens model', () => {
         const [id] = await db('aliens').insert(steve);
         await aliens.update(id, { name: 'STEVE' });
         const updated = await db('aliens').where({ id }).first();
-        expect(updated).toMatchObject({ id: id, name: 'STEVE' });
+        expect(updated).toMatchObject({ id: id, name: 'STEVE`' });
       });
     });
   });
